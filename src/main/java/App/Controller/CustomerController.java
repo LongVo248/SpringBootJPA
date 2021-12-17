@@ -13,7 +13,7 @@ public class CustomerController {
     private CustomerService customerService;
 
 
-    @GetMapping( value={"/customer-list"})
+    @GetMapping(value = {"/customer-list"})
     public ModelAndView listCustomer(Model model) {
         ModelAndView modelAndView = new ModelAndView("customer-list");
         model.addAttribute("listCustomer", customerService.findAll());
@@ -60,8 +60,9 @@ public class CustomerController {
         model.addAttribute("listCustomer", customerService.findAll());
         return "redirect:/customer-list";
     }
-    @GetMapping(value="/hitrang")
-    public ModelAndView hitrangne(){
+
+    @GetMapping(value = "/hitrang")
+    public ModelAndView hitrangne() {
         ModelAndView modelAndView = new ModelAndView("index");
         return modelAndView;
 
